@@ -3,12 +3,13 @@
 #include <string.h>
 #include <math.h>
 #include <time.h>
+#include "Bitmap_Gen.h"
 
 #define WIDTH 255
 #define HEIGHT 255
 #define PI 3.14159
 
-#define SIZE_B (WIDTH * HEIGHT * 24)/8 + 54
+#define SIZE_B ((WIDTH * HEIGHT * 24)/8) - 54
 
 enum color{
     RED = 0, GREEN, BLUE
@@ -29,9 +30,6 @@ int main(void){
 
     //Pixel Data //
 
-/*     for (i = 54; i < (SIZE_B-54); i += 1){
-        bitmap[i] = 255*sin(i);      
-    }*/
     int c = 0;
      for (i = 54; i < (SIZE_B + (255*3)); i += 1){
         if (c == 510){
