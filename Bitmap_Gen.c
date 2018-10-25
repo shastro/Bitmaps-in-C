@@ -30,26 +30,9 @@ int main(void){
 
     //Pixel Data //
 
-    int c = 0;
-     for (i = 54; i < (SIZE_B + (255*3)); i += 1){
-        if (c == 510){
-            c = 0;
-        }
-        bitmap[i] = (((255.0) * sin(c/2)) + (256/2)); 
-        c++;
-    }
-/*    int c = 0;
-     for (i = 54; i < (SIZE_B + (255*3)); i += 1){
-        if (c == 256){
-            c = 0;
-        }
-        int d = (255*sin(c) + 256/2); 
-        c++;
-        printf("%d--", d);
-    }*/
+    int id = sin_func1(bitmap);
 
-
-    sprintf(filenum, "%d", s);
+    sprintf(filenum, "%d", id);
     strcpy(filename, "./bitmpdump/bitmap.bmp");
     strcat(filename,filenum);
     strcat(filename,".bmp");
