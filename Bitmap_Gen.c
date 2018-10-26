@@ -1,19 +1,5 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <math.h>
-#include <time.h>
 #include "Bitmap_Gen.h"
 
-#define WIDTH 255
-#define HEIGHT 255
-#define PI 3.14159
-
-#define SIZE_B ((WIDTH * HEIGHT * 24)/8) - 54
-
-enum color{
-    RED = 0, GREEN, BLUE
-};
 
 void bitmap_header(char bitmap[]);
 
@@ -32,6 +18,7 @@ int main(void){
 
     int id = sin_func1(bitmap);
 
+    // File Naming //
     sprintf(filenum, "%d", id);
     strcpy(filename, "./bitmpdump/bitmap.bmp");
     strcat(filename,filenum);
@@ -44,7 +31,7 @@ int main(void){
         fputc(bitmap[i], file);
     }
     fclose(file);
-    printf("Outnum = %d\n\n", s);
+    printf("Outnum = %d\n\n", id);
 
 
 	return 0;
