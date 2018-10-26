@@ -22,6 +22,7 @@ int sin_func1(char bitmap[])
     return 1; // Function ID
 }
 
+/* Lmaeo */
 int rgb_func1(char bitmap[])
 {
     int c = 0;
