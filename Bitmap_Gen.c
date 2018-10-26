@@ -2,7 +2,7 @@
 
 int main(void){
 
-	char bitmap[SIZE_B + 1];
+	char bitmap[SIZE_B];
     char filenum[200];
     char filename[40];
 	int i;
